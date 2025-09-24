@@ -14,7 +14,7 @@
     "lint:fix": "biome lint --write ./src && biome check --write ./src"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.2.4",
     "@testcontainers/postgresql": "^10.16.0",
     "@types/bun": "^1.1.14",
     "@types/pg": "^8.11.10",
