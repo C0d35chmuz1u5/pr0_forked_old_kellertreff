@@ -1,0 +1,62 @@
+{
+  "name": "kt-frontend",
+  "private": true,
+  "author": "holzmaster",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc -b && vite build",
+    "ci": "biome ci ./src",
+    "format": "biome format --write ./src",
+    "lint": "eslint .",
+    "test": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fontsource/roboto": "^5.1.1",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "7.0.2",
+    "@sentry/react": "^9.3.0",
+    "classix": "^2.2.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-hot-toast": "^2.5.1",
+    "react-lazy-with-preload": "^2.2.1",
+    "react-router-dom": "^7.1.1",
+    "swr": "^2.3.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@eslint/js": "^9.17.0",
+    "@types/bun": "^1.1.14",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "babel-plugin-react-compiler": "19.0.0-beta-714736e-20250131",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-compiler": "19.0.0-beta-714736e-20250131",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^16.0.0",
+    "sass": "^1.83.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.0",
+    "vite": "^6.0.7"
+  },
+  "overrides": {
+    "@types/react": "$@types/react",
+    "@types/react-dom": "$@types/react-dom",
+    "react": "$react",
+    "react-dom": "$react-dom"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome",
+    "lefthook"
+  ],
+  "engines": {
+    "bun": ">=1.1.0"
+  }
+}

@@ -1,0 +1,16 @@
+node_modules
+dist
+build
+*.js
+*.js.map
+*.log
+*.db*
+*.tsbuildinfo
+data
+*.pem
+*.pem.pub
+.env*
+!.env.development
+redis-data
+*.tsv
+*.csv

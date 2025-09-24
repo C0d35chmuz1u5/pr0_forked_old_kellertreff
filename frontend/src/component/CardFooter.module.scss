@@ -1,0 +1,15 @@
+@use "../abstract/constants" as c;
+
+.footer {
+	display: flex;
+}
+.right { justify-content: flex-end; }
+.between { justify-content: space-between; }
+
+.spacing {
+	padding:
+		0 * c.$unit
+		2 * c.$unit
+		1 * c.$unit
+		2 * c.$unit;
+}

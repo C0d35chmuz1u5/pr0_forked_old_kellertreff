@@ -1,0 +1,32 @@
+@use "../abstract/constants" as c;
+@use "../abstract/colors" as color;
+@use "../abstract/mixins" as mixin;
+
+$match-color: color.$pr0gramm-orange;
+
+// TODO: We maybe want some parallax on this instead
+
+.card {
+	overflow: hidden;
+	position: relative;
+
+	&::before {
+		content: " ";
+		display: inline-block;
+		position: absolute;
+		opacity: 0.025;
+
+		@include mixin.masked;
+
+		width: 700px;
+		height: 1000px;
+		top: -2px;
+		left: -30px;
+
+		@include mixin.mask-color(url("../icons/heart.svg"), $match-color);
+	}
+
+	.highlighted {
+		// TODO
+	}
+}

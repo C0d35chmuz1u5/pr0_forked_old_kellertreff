@@ -1,0 +1,9 @@
+@use "../../abstract/constants" as c;
+
+.setup {
+	margin:
+		(c.$unit * 5)
+		(c.$unit * 1)
+		0
+		(c.$unit * 1);
+}

@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    paths-ignore:
+      - "new/**"
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        component: ['frontend', 'backend']
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 21.x
+        cache-dependency-path: "**/package-lock.json"
+
+    - name: Build and Test
+      working-directory: ${{ matrix.component }}
+      run: |
+        npm ci --legacy-peer-deps
+        npm run ci
+        npm run build:prod
+      env:
+        CI: true

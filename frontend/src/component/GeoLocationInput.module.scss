@@ -1,0 +1,11 @@
+@use "../abstract/constants" as c;
+
+.wrapper {
+	display: flex;
+	gap: 2 * c.$unit;
+	flex-wrap: wrap;
+}
+
+.select {
+	width: 20 * c.$unit;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "kt-pm-service",
+  "version": "1.0.0",
+  "author": "holzmaster",
+  "private": true,
+  "license": "AGPL-3.0",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "ci": "tsc --noEmit && biome ci ./src",
+    "format": "biome format --write ./src",
+    "lint": "biome lint ./src",
+    "test": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pr0gramm/api": "^0.3.0",
+    "@sentry/node": "^8.27.0",
+    "pino": "^9.3.2",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@types/bun": "^1.1.8",
+    "bun": "^1.1.26",
+    "pino-pretty": "^11.2.2",
+    "typescript": "^5.5.4"
+  }
+}

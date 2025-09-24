@@ -1,0 +1,23 @@
+{
+	"explorer.fileNesting.enabled": true,
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
+	"explorer.fileNesting.patterns": {
+		"tsconfig.json": "tsconfig.*.json",
+		"package.json": "package-lock.json, .npmrc, yarn.lock, .yarnrc",
+		"*.tsx": "$(capture).module.scss"
+	},
+	"cSpell.language": "de,en",
+	"cSpell.words": [
+		"xsrf",
+		"csrf",
+		"openapi",
+		"typebox",
+		"autoload",
+		"sqlite",
+		"pairability",
+		"splitcord",
+		"fastify",
+		"pino",
+		"kysely"
+	],
+}

@@ -1,0 +1,33 @@
+@use "constants" as const;
+
+// https://css-tricks.com/approaches-media-queries-sass/
+@mixin mobile {
+	@media only screen and (max-width: const.$max-width) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media only screen and (min-width: const.$max-width) {
+		@content;
+	}
+}
+
+@mixin no-selection {
+	user-select: none;
+	// See: https://stackoverflow.com/a/21003770
+	-webkit-tap-highlight-color: transparent;
+}
+
+@mixin masked {
+	-webkit-mask-size: contain;
+	mask-size: contain;
+
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+@mixin mask-color($url, $color) {
+	background-color: $color;
+	-webkit-mask: $url;
+	mask: $url;
+	mask-repeat: no-repeat;
+}

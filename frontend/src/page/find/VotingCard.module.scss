@@ -1,0 +1,31 @@
+@use "sass:math";
+@use "../../abstract/constants" as c;
+
+.card {
+	will-change: opacity, background-color, transform;
+	animation: show-card var(--vote-present-animation-duration) cubic-bezier(0, 1.5, 1, 1) both;
+}
+.up, .down {
+	animation: vote-result var(--vote-submit-animation-duration) cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+.up { --animation-source: #782213; }
+.down { --animation-source: #444444; }
+
+div.distance {
+	margin-bottom: c.$unit * 2;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: math.div(c.$unit, 2);
+}
+
+@keyframes vote-result {
+	0% { background-color: var(--animation-source); }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes show-card {
+	0% { transform: translateY(10vw); opacity: 0; }
+}

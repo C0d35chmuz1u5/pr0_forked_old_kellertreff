@@ -1,0 +1,47 @@
+@use "sass:math";
+@use "../abstract/constants" as c;
+
+.max-chars-hint {
+	color: var(--muted-color);
+	text-align: right;
+}
+
+.area {
+	resize: none;
+
+	font-size: 18px;
+	margin-left: -20px;
+	margin-right: -20px;
+	padding: 5px c.$unit;
+
+	min-height: 200px;
+	min-width: calc(100% + 2 * 20px);
+}
+
+.preview {
+	padding: 0 (c.$unit + 5px);
+
+	border: 1px solid rgba(255, 255, 255, 0.23);
+	border-radius: math.div(c.$unit, 2);
+
+    > * {
+		margin: -1px 0 0 0;
+	}
+}
+
+.input, .input textarea {
+	min-height: 300px;
+
+	textarea {
+		min-height: (300px - 2 * 19px + 1px);
+	}
+}
+
+
+
+.tabs {
+	> div > div {
+		display: flex;
+		justify-content: flex-end;
+	}
+}

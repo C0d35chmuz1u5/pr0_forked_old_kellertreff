@@ -1,0 +1,7 @@
+$min-stage-height: 50vh;
+
+.stage {
+	min-height: $min-stage-height;
+	display: flex;
+	flex-direction: column;
+}

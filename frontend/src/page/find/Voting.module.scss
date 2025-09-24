@@ -1,0 +1,11 @@
+@use "../../abstract/constants" as c;
+@use "../../abstract/colors" as color;
+@use "./constants" as vote-constants;
+
+$downvote-color: color.$gray-1;
+$upvote-color: color.$pr0gramm-orange;
+
+// TODO: Fix this ugly voting bar stuff
+.voting {
+	margin-bottom: vote-constants.$vote-bar-height;
+}

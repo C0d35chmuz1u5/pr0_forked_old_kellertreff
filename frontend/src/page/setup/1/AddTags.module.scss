@@ -1,0 +1,16 @@
+@use "../../../abstract/constants" as c;
+
+.protip {
+	text-align: right;
+}
+
+.stage {
+	input {
+		padding: c.$unit * 2;
+	}
+}
+
+.tag-group {
+	margin-left: -20px;
+	margin-right: -20px;
+}

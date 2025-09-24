@@ -1,0 +1,46 @@
+{
+  "name": "kt-backend",
+  "private": true,
+  "author": "holzmaster",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun src/index.ts",
+    "test": "bun test && tsc",
+    "ci": "biome ci ./src",
+    "format": "biome format --write ./src",
+    "lint": "biome lint ./src",
+    "lint:fix": "biome lint --write ./src && biome check --write ./src"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@testcontainers/postgresql": "^10.16.0",
+    "@types/bun": "^1.1.14",
+    "@types/pg": "^8.11.10",
+    "lefthook": "^1.10.1",
+    "pino-pretty": "^13.0.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@hono/sentry": "^1.2.0",
+    "@hono/zod-validator": "^0.5.0",
+    "@sentry/bun": "^9.3.0",
+    "cybertoken": "^3.0.2",
+    "hono": "^4.6.15",
+    "hono-pino": "^0.8.0",
+    "kysely": "^0.28.2",
+    "passport-pr0gramm": "^0.4.3",
+    "pg": "^8.13.1",
+    "pino": "^9.6.0",
+    "zod": "^3.24.1"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome",
+    "lefthook"
+  ],
+  "engines": {
+    "bun": ">=1.1.0"
+  }
+}

@@ -1,0 +1,15 @@
+@use "../abstract/constants" as c;
+@use "../abstract/colors" as color;
+
+.view {
+	margin: 0 0 (c.$unit * 2) 0;
+
+	display: flex;
+	gap: c.$unit;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.highlighted {
+	background-color: color.$blue-2 !important;
+}

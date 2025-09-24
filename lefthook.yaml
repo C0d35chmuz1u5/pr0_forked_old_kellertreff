@@ -1,0 +1,56 @@
+# Docs: https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+pre-push:
+  parallel: true
+  commands:
+    # lint-frontend:
+    #   root: "frontend/"
+    #   glob: "*.{js,ts,tsx,jsx,css,scss}"
+    #   run: npm run ci
+
+    lint-service-pm-service:
+      root: "service/pm-service/"
+      glob: "*.{js,ts,tsx,jsx,css,scss}"
+      run: npm run ci
+
+    lint-backend:
+      root: "backend/"
+      glob: "*.{js,ts,tsx,jsx,css,scss}"
+      run: npm run ci
+
+    lint-backend-2:
+      root: "backend-2/"
+      glob: "*.{js,ts,tsx,jsx,css,scss}"
+      run: npm run ci
+
+pre-commit:
+  parallel: true
+  commands:
+    format-frontend:
+      root: "frontend/"
+      glob: "*.{js,ts,tsx,jsx,css,scss}"
+      run: npm run format && git add {staged_files}
+
+    format-service-pm-service:
+      root: "service/pm-service/"
+      glob: "*.{js,ts,tsx,jsx,css,scss}"
+      run: npm run format && git add {staged_files}
+
+    format-backend:
+      root: "backend/"
+      glob: "*.{js,ts}"
+      run: npm run format && git add {staged_files}
+
+    format-backend-2:
+      root: "backend-2/"
+      glob: "*.{js,ts}"
+      run: npm run format && git add {staged_files}
+
+skip_output:
+  - meta
+  - summary
+  - empty_summary
+  - success
+  - execution
+  - execution_out
+  - execution_info
+  - skips

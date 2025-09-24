@@ -1,0 +1,17 @@
+.vote-of-user {
+	.link-button {
+		cursor: pointer;
+		border-radius: 0;
+		font-weight: normal;
+		background-color: transparent;
+		padding: 0px;
+		font-size: revert;
+
+		color: var(--muted-color);
+
+		&:focus, &:hover {
+			background-color: transparent;
+			color: var(--primary-color);
+		}
+	}
+}

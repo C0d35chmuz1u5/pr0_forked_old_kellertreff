@@ -1,0 +1,21 @@
+services:
+  # redis:
+  #   image: redis:alpine
+  #   ports:
+  #     - "127.0.0.1:6379:6379"
+  #   command: --loglevel warning
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_DB=kt
+      - POSTGRES_PASSWORD=kt_postgres
+      - POSTGRES_USER=kt_postgres
+    ports:
+      - "127.0.0.1:5432:5432"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 127.0.0.1:9090:8080

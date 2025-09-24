@@ -1,0 +1,4 @@
+@use "../../abstract/constants" as c;
+
+$vote-size: 10 * c.$unit;
+$vote-bar-height: $vote-size + 2 * c.$unit;

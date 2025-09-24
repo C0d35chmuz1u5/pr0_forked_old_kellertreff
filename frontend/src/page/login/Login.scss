@@ -1,0 +1,29 @@
+@use "../../abstract/mixins" as mixin;
+@use "../../abstract/constants" as c;
+
+.intro {
+	text-align: center;
+
+	.how-it-works {
+		display: flex;
+		flex-direction: column;
+		gap: c.$unit * 2;
+
+		padding: 0 (c.$unit * 2);
+		@include mixin.desktop {
+			padding: 0 (c.$unit * 10);
+		}
+
+		@include mixin.mobile {
+			// TODO: Fix this, maybe we can use grid instead of media queries
+			gap: c.$unit;
+		}
+	}
+
+	.tldr {
+		color: var(--primary-color);
+	}
+	.hint {
+		margin: c.$unit * 2 0;
+	}
+}

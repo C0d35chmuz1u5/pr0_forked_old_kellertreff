@@ -1,0 +1,94 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "monthly"
+    groups:
+      patch-dependencies:
+        update-types:
+          - "patch"
+
+  - package-ecosystem: "npm"
+    directory: "/backend"
+    schedule:
+      interval: "monthly"
+    groups:
+      patch-dependencies:
+        update-types:
+          - "patch"
+
+  - package-ecosystem: "npm"
+    directory: "/new/frontend"
+    schedule:
+      interval: "monthly"
+    groups:
+      patch-dependencies:
+        update-types:
+          - "patch"
+
+  - package-ecosystem: "npm"
+    directory: "/new/backend"
+    schedule:
+      interval: "monthly"
+    groups:
+      patch-dependencies:
+        update-types:
+          - "patch"
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+
+  - package-ecosystem: "docker"
+    directory: "/tasks/prune-inactive-users"
+    schedule:
+      interval: "monthly"
+
+  - package-ecosystem: "docker"
+    directory: "/tasks/spam"
+    schedule:
+      interval: "monthly"
+
+  - package-ecosystem: "docker"
+    directory: "/tasks/update-metadata"
+    schedule:
+      interval: "monthly"
+
+  - package-ecosystem: "docker"
+    directory: "/tasks/update-zip-codes"
+    schedule:
+      interval: "monthly"
+
+  - package-ecosystem: "pip"
+    directory: "/tasks/prune-inactive-users"
+    schedule:
+      interval: "monthly"
+    groups:
+      patch-dependencies:
+        update-types:
+          - "patch"
+
+  - package-ecosystem: "pip"
+    directory: "/tasks/spam"
+    schedule:
+      interval: "monthly"
+    groups:
+      patch-dependencies:
+        update-types:
+          - "patch"
+
+  - package-ecosystem: "pip"
+    directory: "/tasks/update-metadata"
+    schedule:
+      interval: "monthly"
+    groups:
+      patch-dependencies:
+        update-types:
+          - "patch"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

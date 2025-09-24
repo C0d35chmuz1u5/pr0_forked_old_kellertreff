@@ -1,0 +1,8 @@
+
+.grid {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 8px * 2;
+}

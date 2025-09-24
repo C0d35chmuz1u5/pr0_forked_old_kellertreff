@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "target": "es2022",
+        "module": "NodeNext",
+        "strict": true,
+        "lib": ["ES2021"],
+
+        // Additional Checks
+        // "noUnusedLocals": true,
+        // "noUnusedParameters": true,
+        // "noImplicitReturns": true,
+        // "noUncheckedIndexedAccess": true,
+        // "noPropertyAccessFromIndexSignature": true,
+
+        "jsx": "react-jsx",
+        "jsxImportSource": "hono/jsx",
+
+        "noEmit": true,
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@log": ["./src/log.ts"],
+            "@db": ["./src/db/index.ts"],
+            "@shared/*": ["src/shared/src/*"]
+        }
+    },
+    "include": ["src"]
+}

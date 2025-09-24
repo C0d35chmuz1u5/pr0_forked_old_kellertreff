@@ -1,0 +1,38 @@
+@use "../../abstract/constants" as c;
+@use "../../abstract/colors" as color;
+@use "./constants" as vote-constants;
+
+.bar {
+	position: fixed;
+	inset: auto 0 c.$unit * 7 0;
+
+	width: 100%;
+	padding: c.$unit 0;
+
+	display: flex;
+	gap: c.$unit * 2;
+	justify-content: center;
+
+	z-index: 9001;
+
+	background-color: color.$gray-3;
+
+	button {
+		width: vote-constants.$vote-size;
+		height: vote-constants.$vote-size;
+
+		background-color: transparent;
+		border: 0;
+		cursor: pointer;
+
+		&:hover, &:active, &:focus, &:focus-within {
+			svg path {
+				fill: color.$orange-3;
+			}
+		}
+
+		svg path {
+			fill: #888;
+		}
+	}
+}

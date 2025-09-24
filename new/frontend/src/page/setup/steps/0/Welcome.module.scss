@@ -1,0 +1,67 @@
+@use "@/abstract/constants" as c;
+
+$logo-animation-duration: 1.5s;
+.logo {
+	max-width: 20vh;
+	margin-bottom: 40px;
+
+	animation:
+		logo-fade-in $logo-animation-duration cubic-bezier(.22, .61, .36, 1),
+		logo-movement 8s $logo-animation-duration ease-in-out infinite;
+}
+
+
+@keyframes logo-movement {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(3 * c.$unit); }
+	100% { transform: translateY(0); }
+}
+
+$greeting-animation-duration: 0.8s;
+.greeting {
+	animation: text-animation $greeting-animation-duration;
+	animation-delay: $logo-animation-duration * 0.7;
+	animation-fill-mode: both;
+}
+
+$message-animation-duration: 0.4s;
+.message {
+	animation: text-animation $message-animation-duration;
+	animation-delay: ($logo-animation-duration + $greeting-animation-duration) * 0.7;
+	animation-fill-mode: both;
+}
+
+.stage {
+	text-align: center;
+
+	nav {
+		margin-top: 40px;
+
+		animation: logo-fade-in 0.2s;
+		animation-timing-function: cubic-bezier(.22,.61,.36,1);
+		animation-fill-mode: both;
+		animation-delay: ($logo-animation-duration + $greeting-animation-duration + $message-animation-duration) * 0.7;
+	}
+}
+
+@keyframes logo-fade-in {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1.0);
+	}
+}
+@keyframes text-animation {
+	0% {
+		opacity: 0;
+		transform: translateY(20%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

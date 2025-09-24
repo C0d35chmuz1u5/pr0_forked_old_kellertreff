@@ -1,0 +1,62 @@
+@use "abstract/constants" as const;
+@use "abstract/constants" as c;
+@use "abstract/colors" as color;
+@use "abstract/mixins" as mixin;
+
+:root {
+	--content-background-color: #{color.$gray-6};
+	--content-alternative-background-color: #{color.$gray-5};
+	// --content-dark-alternative-background-color: #0e0e0f;
+
+	--fail-color: #fc8833;
+	--muted-color: #999;
+
+	// Also set in index.tsx
+	--primary-color: #{color.$orange-3};
+	--secondary-color: #b33924;
+
+	--text-primary-color: #fff;
+	--text-secondary-color: #999;
+}
+
+body {
+	text-rendering: optimizeLegibility;
+	margin: 0;
+	font-family: Roboto, sans-serif;
+
+	// background-color: #070708;
+	// transition: background-color 0.3s;
+}
+
+html, body, #root {
+	height: 100%; //100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+$nav-height: c.$unit * 7;
+
+// TODO: Make more use of CSS modules
+
+// TODO: Can be do this better?
+* {
+	scrollbar-color: color.$gray-2 color.$gray-lol;
+	scrollbar-width: thin;
+}
+
+.container {
+	max-width: const.$max-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.adjust-for-navbar {
+	padding-bottom: $nav-height;
+}
+main {
+	width: 100%;
+}
+
+small, .muted {
+	color: var(--muted-color);
+}

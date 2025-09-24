@@ -1,0 +1,43 @@
+@use "../abstract/constants" as c;
+@use "../abstract/colors" as color;
+@use "../abstract/mixins" as mixin;
+
+$match-color: color.$pr0gramm-orange;
+$downvote-color: color.$gray-1;
+$upvote-color: color.$pr0gramm-orange;
+
+// TODO: We maybe want some parallax on this instead
+
+.card {
+	overflow: hidden;
+	position: relative;
+
+	&::before {
+		content: " ";
+		display: inline-block;
+		position: absolute;
+		opacity: 0.15;
+
+		@include mixin.masked;
+
+		$vote-size: 150px;
+
+		width: $vote-size;
+		height: $vote-size;
+		top: -40px;
+		left: -30px;
+	}
+
+
+	&.up::before {
+		@include mixin.mask-color(url("../icons/plus.svg"), $upvote-color);
+	}
+
+	&.down {
+		opacity: 0.5;
+
+		&::before {
+			@include mixin.mask-color(url("../icons/minus.svg"), $downvote-color);
+		}
+	}
+}

@@ -1,0 +1,7 @@
+@use "../abstract/constants" as c;
+
+.page {
+	display: flex;
+	flex-direction: column;
+	margin: 2 * c.$unit;
+}

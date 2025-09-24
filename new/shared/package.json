@@ -1,0 +1,17 @@
+{
+  "name": "kt-shared",
+  "private": true,
+  "author": "holzmaster",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "ci": "biome ci ./src",
+    "format": "biome format --write ./src"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0"
+  }
+}
