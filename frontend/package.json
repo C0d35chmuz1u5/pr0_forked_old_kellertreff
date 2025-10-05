@@ -62,7 +62,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "babel-plugin-react-compiler": "^19.0.0-beta-714736e-20250131",
     "sass": "^1.87.0",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "vite": "^6.2.6",
     "vite-bundle-visualizer": "^1.2.1",
     "vite-tsconfig-paths": "^5.1.4"
