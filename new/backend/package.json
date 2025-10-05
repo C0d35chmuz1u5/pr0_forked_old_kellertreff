@@ -29,7 +29,7 @@
     "@sentry/bun": "^9.3.0",
     "cybertoken": "^3.0.2",
     "hono": "^4.6.15",
-    "hono-pino": "^0.8.0",
+    "hono-pino": "^0.10.2",
     "kysely": "^0.28.2",
     "passport-pr0gramm": "^0.4.3",
     "pg": "^8.13.1",
