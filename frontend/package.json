@@ -29,7 +29,7 @@
     "react-icons": "^5.5.0",
     "react-lazy-with-preload": "^2.2.1",
     "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.4.1",
+    "react-router-dom": "^7.9.2",
     "react-timeago": "^8.2.0",
     "react-use": "^17.6.0",
     "remark-breaks": "^4.0.0",
